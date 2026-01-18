@@ -10,14 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toast.classList.remove("opacity-0", "pointer-events-none");
     toast.classList.add("opacity-100");
-    toast.classList.remove("translate-y-4");
-toast.classList.add("translate-y-0");
 
 
     toastTimeout = setTimeout(() => {
       toast.classList.add("opacity-0", "pointer-events-none");
       toast.classList.remove("opacity-100");
-      toast.classList.add("translate-y-4");
 
     }, 3500);
   }
