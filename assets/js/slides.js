@@ -46,10 +46,9 @@ slidesData.forEach((slide, index) => {
          >
 
       <!-- DESKTOP -->
-      <div class="absolute inset-0  hidden md:block bg-cover bg-center"
-           style="background-image: url('${slide.desktopImg}')"></div>
+      <div class="absolute inset-0  hidden md:block bg-cover bg-center banner-slide" data-bg="${slide.desktopImg}"></div>
       <!-- MOBILE IMAGE -->
-      <div class="absolute inset-0 md:hidden bg-cover bg-center bg-black/10 bg-blend-overlay" style="background-image: url('${slide.mobileImg}')"></div>
+      <div class="absolute inset-0 md:hidden bg-cover bg-center banner-slide" data-bg="${slide.mobileImg}"></div>
 
       <!-- LEFT CONTENT -->
       <div class="relative z-10 w-full md:w-1/2 text-white text-center items-center flex flex-col justify-center pt-35 md:p-0">
