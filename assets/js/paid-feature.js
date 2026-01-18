@@ -1,25 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
   const toast = document.getElementById("paid-toast");
-  const ctaButtons = document.querySelectorAll(".cta-btn");
+  const paidButtons = document.querySelectorAll(".cta-paid");
 
   let toastTimeout;
 
-  function showToast() {
-    // Reset se já estiver visível
+  function showToast(e) {
+    e.preventDefault();
+
     clearTimeout(toastTimeout);
 
-    toast.classList.remove("opacity-0", "pointer-events-none");
-    toast.classList.add("opacity-100");
+    toast.classList.remove(
+      "opacity-0",
+      "pointer-events-none",
+      "translate-y-4"
+    );
 
+    toast.classList.add(
+      "opacity-100",
+      "translate-y-0"
+    );
 
     toastTimeout = setTimeout(() => {
-      toast.classList.add("opacity-0", "pointer-events-none");
-      toast.classList.remove("opacity-100");
+      toast.classList.add(
+        "opacity-0",
+        "pointer-events-none",
+        "translate-y-4"
+      );
 
-    }, 3500);
+      toast.classList.remove(
+        "opacity-100",
+        "translate-y-0"
+      );
+    }, 4000);
   }
 
-  ctaButtons.forEach(btn => {
+  paidButtons.forEach(btn => {
     btn.addEventListener("click", showToast);
   });
 });
