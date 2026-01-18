@@ -63,7 +63,7 @@ slidesData.forEach((slide, index) => {
 
         <button class="cta-paid mt-6 w-fit px-6 py-3 rounded-full
                        bg-azul-1 hover:bg-white hover:text-azul-1 hover:scale-[1.02]
-                       transition-all transition-discrete duration-150 font-medium font-primary">
+                       transition-all transition-discrete duration-150 font-medium font-primary cursor-pointer active:scale-95 active:bg-azul-escuro">
           ${slide.cta}
         </button>
       </div>
